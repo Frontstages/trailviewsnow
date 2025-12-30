@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrailView Snow – Share & Preview Ski Runs</title>
+  <style>
+    * { box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { margin: 0; background: #0b1d2a; color: #ffffff; }
+    header { padding: 20px; background: #0f2e44; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { margin: 0; font-size: 1.5rem; }
+    nav a { color: #fff; margin-left: 15px; text-decoration: none; font-weight: bold; }
+    .hero { padding: 60px 20px; text-align: center; background: linear-gradient(#123a55, #0b1d2a); }
+    .hero h2 { font-size: 2.2rem; margin-bottom: 10px; }
+    .hero p { max-width: 600px; margin: auto; opacity: 0.9; }
+    .container { padding: 40px 20px; max-width: 1100px; margin: auto; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #143d5a; border-radius: 10px; padding: 20px; }
+    .card h3 { margin-top: 0; }
+    .upload { background: #0f2e44; padding: 30px; border-radius: 10px; }
+    input, select, button { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: none; }
+    button { background: #1fa2ff; color: #fff; font-weight: bold; cursor: pointer; }
+    button:hover { background: #1483cc; }
+    footer { text-align: center; padding: 20px; opacity: 0.6; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>TrailView Snow</h1>
+  <nav>
+    <a href="#">Explore Runs</a>
+    <a href="#upload">Upload</a>
+    <a href="#">Login</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>See the Run Before You Ride It</h2>
+  <p>Watch real ski & snowboard runs from all skill levels, uploaded by riders across the world.</p>
+</section>
+
+<section class="container">
+  <h2>Popular Runs</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Whistler – Peak to Creek</h3>
+      <p>Difficulty: Advanced</p>
+      <p>Length: 11 km</p>
+    </div>
+    <div class="card">
+      <h3>Vail – Schoolmarm</h3>
+      <p>Difficulty: Beginner</p>
+      <p>Great for first timers</p>
+    </div>
+    <div class="card">
+      <h3>Park City – Jupiter Bowl</h3>
+      <p>Difficulty: Expert</p>
+      <p>Steep & ungroomed</p>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="upload">
+  <h2>Upload Your Run</h2>
+  <div class="upload">
+    <input type="text" placeholder="Resort Name" />
+    <input type="text" placeholder="Run Name" />
+    <select>
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+      <option>Expert</option>
+    </select>
+    <input type="file" accept="video/*" />
+    <button>Upload Run</button>
+    <p style="font-size: 0.8rem; opacity: 0.7;">(Video upload is UI-only for now)</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 TrailView Snow • Built for skiers & riders</p>
+</footer>
+
+</body>
+</html>
